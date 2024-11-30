@@ -1,0 +1,211 @@
+/* Define CSS Variables for Orange and Gray Colors */
+:root {
+    --primary-color: #ff6600; /* Orange */
+    --secondary-color: #f4f4f4; /* Light Gray */
+    --background-color: #f2f2f2; /* Very light gray */
+    --text-color: #333333; /* Dark text for contrast */
+    --accent-color: #a1a1a1; /* Medium Gray */
+    --input-border-color: #dcdcdc; /* Light border color */
+    --input-focus-color: #ff4500; /* Darker Orange for focus */
+    --button-hover-color: #ffa500; /* Lighter Orange for button hover */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid var(--accent-color);
+    box-shadow: 0 4px 10px var(--shadow-color); /* Adds depth */
+}
+
+header .logo {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Login Form Styles */
+.login-form {
+    background: linear-gradient(145deg, var(--primary-color), var(--secondary-color)); /* Orange to Gray Gradient */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px var(--shadow-color);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form input:focus {
+    border-color: var(--input-focus-color);
+    outline: none;
+    transform: scale(1.05);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(145deg, var(--accent-color), var(--primary-color)); /* Light Gray to Orange */
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--button-hover-color);
+}
+
+.login-form .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.login-form .forgot-password:hover {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 4px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .designer-info {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+footer .contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .contact-info a:hover {
+    color: var(--text-color);
+}
+
+footer .social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social-links ul li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-links ul li a:hover {
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    footer .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
